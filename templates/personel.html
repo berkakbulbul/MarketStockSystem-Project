@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %} Personnel {% endblock %}
+
+{% block contentsub %}
+    <h1>{{ n }} </h1>
+        <table id="deneme-tablo">
+            <tr>
+                <th>First name</th>
+                <th>Age</th>
+                <th>ID</th>
+                <th>Color</th>
+            </tr>
+            {% for k, v in tablo.items() %}
+                <tr>
+                    <td>{{ k }}</td>
+                    <td>{{ v[0] }}</td>
+                    <td>{{ v[1] }}</td>
+                    <td>{{ v[2] }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+
+{% endblock %}
+
+

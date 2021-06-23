@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Market Stock</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../static/main.css">
+    <script src="../static/main.js"></script>
+
+</head>
+
+    <section class="hero is-dark is-fullheight"  >
+
+        <div class="hero-head" style=" position: fixed; width: 100%; overflow: hidden; top: 0%;">
+            <nav class="navbar" style=" border-bottom: solid; border-bottom-width: thin;">
+                <div class="container" >
+
+
+                    <div id="navbarMenuHeroA" class="navbar-menu">
+                        <a class="navbar-item" style="pointer-events: none;">
+                              <b style="font-size:20px;">Market Stock Control System</b>
+                        </a>
+
+                        <div class="navbar-end">
+
+
+                            <a class="navbar-item" style="font-size:17px;" href="{{ url_for('login') }}">
+                                Login
+                            </a>
+
+                            <a class="navbar-item" style="font-size:17px;" href="{{ url_for('register') }}">
+                                Register
+                            </a>
+
+
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="hero-body">
+            <div class="container has-text-centered">
+               <h1>WELCOME</h1>
+            </div>
+        </div>
+
+    </section>
+
+</html>

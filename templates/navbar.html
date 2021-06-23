@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Market Stock</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../static/main.css">
+    <script src="../static/main.js"></script>
+    <link rel="stylesheet" href="../static/profile.css">
+
+
+
+
+</head>
+
+    <section class="hero is-dark is-fullheight"  >
+
+        <div class="hero-head" style=" position: fixed; width: 100%; overflow: hidden; top: 0%;">
+            <nav class="navbar" style=" border-bottom: solid; border-bottom-width: thin;">
+                <div class="container" >
+
+
+                    <div id="navbarMenuHeroA" class="navbar-menu">
+                        <a class="navbar-item" style="pointer-events: none;">
+                              <b style="font-size:20px;"> <a href="mainpage"> Market Stock Control System </a> </b>
+                        </a>
+
+                        <div class="navbar-end">
+
+                            <a href="#" class="navbar-item" data-toggle="modal" data-target="#myModal" style="font-size:17px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+                                </svg>
+                                Add Product
+                            </a>
+
+
+
+                            <a  class="navbar-item" style="font-size:17px;" href="{{ url_for('stats') }}">
+                                Statistics
+                            </a>
+                             <a  class="navbar-item" style="font-size:17px;" href="{{ url_for('retailers') }}">
+                                Retailers
+                            </a>
+
+                            <a class="navbar-item" style="font-size:17px;" href="{{ url_for('profile') }}">
+                                Profile
+                            </a>
+
+
+                            <a class="navbar-item" style="font-size:17px;" href="{{ url_for('logout') }}">
+                                Logout
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div>
+            {% block contentmain %}
+
+            {% endblock %}
+        </div>
+
+    </section>
+
+</html>

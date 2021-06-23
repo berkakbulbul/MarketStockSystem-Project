@@ -1,0 +1,31 @@
+
+<body>
+{% extends "navbar.html" %}
+
+{% block contentmain %}
+    <br><br><br><br><br><br>
+    <h1 style="margin-left: 60px">Retailers </h1>
+    <div class="w-75" style="margin-left: 50px; margin-right: 50px">
+       <table class="table table-striped">
+           <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Phone Number</th>
+                <th scope="col">Address</th>
+
+            </tr>
+            </thead>
+           <tbody>
+           {% for i in range((data|length)) %}
+           <tr>
+
+               <td>{{ data[i][0] }}</td>
+               <td>{{ data[i][1] }}</td>
+               <td>{{ data[i][2] }}</td>
+           </tr>
+            {% endfor %}
+           </tbody>
+    </table>
+    </div>
+{% endblock %}
+</body>

@@ -1,0 +1,111 @@
+
+.side_bar {
+	margin-top: 150px;
+	margin-left: 10px;
+	margin-bottom: 500px;
+	text-align: center;
+
+	/* background-color: #00d1b2;	; */
+	background-color: #363636;
+	border: 2px solid white;
+	border-radius: 5px;
+	width: 20%;
+	height: auto;
+	font: bold;
+	font-size: 150%;
+	
+	color: white;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+
+	/* border: 1px solid red;
+	border-radius: 50px; */
+    /* margin-left: 70px;
+    margin-right: 70px;
+    margin-top: 10px; */
+}
+
+
+.Items_main {
+	margin-top: 100px;
+	/* border: 1px solid yellow; */
+	margin-left: 23%;
+	margin-right: 5%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	padding:5px; /* this */
+
+	
+}
+
+.items {
+	border: 2px solid rgb(0, 0, 0);
+	margin: 7.5px;
+	border-radius: 0.5px;
+	text-align: center;
+	 width: 31%; /* ;) */
+	height: 400px;
+	
+}
+
+.addbutton {
+	background-color: #4CAF50; /* Green */
+	border: none;
+	color: white;
+	width: 100px;
+	height: 50px;
+	margin-right: 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+  }
+
+.removebutton {
+	background-color: #af4c4c; /* Green */
+	border: none;
+	color: white;
+	width: 100px;
+	height: 50px;
+	/* padding: 15px 32px; */
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+  }
+
+.Number {
+	text-align: left;
+	color: black;
+	background-color: white;
+	padding-left: 5px;
+	border: 2px solid rgb(0, 81, 128);
+}
+.numb {
+	width: 100px;
+}
+
+.container {
+	overflow: hidden;
+}
+  
+.filterDiv {
+
+	display: none; /* Hidden by default */
+}
+  
+  /* The "show" class is added to the filtered elements */
+.show {
+	display: block;
+}
+
+.addproduct{
+	background-color: grey;
+	border: 2px rebeccapurple;
+	border-radius: 5px;
+}

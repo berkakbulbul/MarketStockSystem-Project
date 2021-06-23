@@ -1,0 +1,90 @@
+{% extends "navbar.html" %}
+
+{% block contentmain %}
+
+<body onload="filterSelection('all')">
+
+        <!-- Sidebar -->
+        <div class="w3-sidebar w3-bar-block, side_bar">
+            <br>
+
+            <button class="w3-bar-item w3-button" onmouseover="filterSelection('all')"> Show all</button> <hr>
+            <button class="w3-bar-item w3-button" onclick="filterSelection('Dairy')"> Dairy > </button><hr>
+            <button class="w3-bar-item w3-button" onclick="filterSelection('Groceries')"> Groceries ></button><hr>
+            <button class="w3-bar-item w3-button" onclick="filterSelection('Snacks')"> Snacks ></button><hr>
+            <button class="w3-bar-item w3-button" onclick="filterSelection('Beverage')"> Beverage ></button><hr>
+            <button class="w3-bar-item w3-button" onclick="filterSelection('Animal')"> Animal ></button><hr>
+            <button class="w3-bar-item w3-button" onclick="filterSelection('Personal Care')"> Personal Care ></button> <br>
+
+        </div>
+
+
+
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog" style="color: black; background-color: rgb(165, 165, 165);">
+
+              <!-- Modal content-->
+              <form method="post">
+              <div class="modal-content addproduct">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title" style="text-align: center;">Add Product</h4>
+                </div>
+
+                <div class="modal-body">
+                    <label>Product Name: <input type="text" name="p_name"> </label> <br><br>
+                    <label>Category:
+                        <select name="category" id="">
+                            <option value="Dairy">Dairy</option>
+                            <option value="Groceries">Groceries</option>
+                            <option value="Snacks">Snacks</option>
+                            <option value="Beverage">Beverage</option>
+                            <option value="Animal">Animal</option>
+                            <option value="Personal Care">Personal Care</option>
+                        </select>
+                    </label> <br><br>
+                    <label>Brand: <input type="text" name="brand"> </label> <br><br>
+                    <label>Price: <input type="number" name="price"> </label> <br><br>
+                    <label>Amount: <input type="number" name="amount"> </label> <br><br>
+                    <label>Weight: <input type="number" name="weight"> </label> <br>
+
+                </div>
+                <div class="modal-footer">
+                    <input class="btn btn-default" type="submit" name="submit_button" value="Add to Inventory">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+
+              </div>
+            </form>
+            </div>
+          </div>
+
+
+    <form method="post">
+        <div class="Items_main">
+            {% for i in range((data|length)) %}
+
+                <div class="items filterDiv {{ data[i][1] }}">
+                    <br><br>
+                    <label for="item" style="font-size: 2em"> {{ data[i][3] }}</label>
+                    <br><br>
+                    <label for="item" name="sayi"> Quantity: {{ data[i][7] }}</label>
+                    <br><br>
+                    <label for="item" name="sayi"> Brand: {{ data[i][2] }}</label>
+                    <br><br>
+                    <label for="item" name="sayi"> Price: {{ data[i][5] }}</label>
+                    <br><br>
+                    <label class="Number" >Number: <input name="number{{i+1}}" class="numb" min="1" type="number"></label>
+                    <br><br>
+                    <input class="addbutton" type="submit" name="submit_button" value="Add">
+                    <input class="removebutton" type="submit" name="submit_button" value="Remove">
+
+                </div>
+
+            {% endfor %}
+
+        </div>
+    </form>
+
+</body>
+{% endblock %}
