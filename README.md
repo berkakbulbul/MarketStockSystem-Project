@@ -25,6 +25,7 @@ Step 2: Run the config file to upload database.
 ---
 #### Login.
 ![Recordit GIF](http://g.recordit.co/GrzM5KUznb.gif)
+---
 #### Adding Product
 ![Recordit GIF](http://g.recordit.co/PwqFi6ENGN.gif)
 ------
